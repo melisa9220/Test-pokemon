@@ -26,8 +26,8 @@ const getPokemonsByUser = async (userId) => {
   return Pokemon.find({ userId });
 };
 
-const getPublicsPokemon = async () => {
-  return Pokemon.find({ isPublic: 1 });
+const getPublicsPokemon = async (skip, limit) => {
+  return Pokemon.find({ isPublic: 1 }).skip(skip).limit(limit);
 };
 
 const deletePokemon = async (pokemonId, userId) => {

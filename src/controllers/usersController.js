@@ -46,7 +46,7 @@ const authenticateUser = async (req, res) => {
       if (match) {
         const { _id, email: userEmail } = user;
         const tokenData = { _id, email: userEmail };
-        const token = jwt.sign(tokenData, SECRET_KEY, { expiresIn: "120m" });
+        const token = jwt.sign(tokenData, SECRET_KEY, { expiresIn: "20m" });
 
         return res.status(200).send({ token });
       }
