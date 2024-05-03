@@ -1,0 +1,20 @@
+{
+  "name": "pokemon-project",
+  "version": "0.0.1",
+  "description": "Test",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "Melisa Castro Rodriguez",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "env-var": "^7.4.1",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.3",
+    "uuid": "^9.0.1"
+  }
+}
