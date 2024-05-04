@@ -41,7 +41,11 @@ const getPublicsPokemon = async (req, res) => {
     const page = parseInt(req.query.page) || 1; // number page by default 1
     const limit = parseInt(req.query.limit) || 10; // number documents per page, by default 10
     const skip = (page - 1) * limit; // Jump documents for the pagination
-    const pokemons = await pokemonRepository.getPublicsPokemon(skip, limit);
+    const pokemons = await pokemonRepository.getPublicsPokemon(
+      skip,
+      limit,
+      page
+    );
     return res.status(200).send({ data: pokemons, msg: "Public pokemons" });
   } catch (err) {
     return res.status(500).send({ msg: err.message });
